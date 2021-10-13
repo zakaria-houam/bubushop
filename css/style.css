@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --first:#11698E;
+    --second:#19456B;
+    --third:#16C79A;
+    --fourth:white;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: .5rem;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+.logo a{
+    color: var(--first);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+.search-bar input{
+    height: 2rem;
+    width: 30rem;
+    border: transparent;
+    border-right: 1px solid var(--first);
+}
+.search-bar input:focus{
+    outline: none;
+}
+.search-bar input::placeholder{
+    font-weight: 100;
+    padding-left: 1rem;
+}
+.search-bar{
+    border: 1px solid var(--first);
+    border-radius: 10px;
+    padding-right: .5rem;
+}
+.search-bar i{
+    padding-left: .5rem;
+    cursor: pointer;
+}
+.phone h2{
+    color: var(--second);
+    font-size: 1rem;
+}
+.phone h3{
+    color: var(--first);
+    font-size: .8rem;
+}
+.shopping{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.shopping i{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.shopping h4{
+    color: var(--third);
+    font-size: .7rem;
+    margin-top: .9rem;
+}
+.shopping .likes::after{
+    position: relative;
+    content: '1';
+    background: var(--second);
+    top: 0;
+    left: -.5rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 20px;
+    padding: .2rem;
+    font-size: .7rem;
+    color: white;
+}
+.shopping .bag::after{
+    position: relative;
+    content: '1';
+    background: var(--second);
+    top: 0;
+    left: -.5rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 20px;
+    padding: .2rem;
+    font-size: .7rem;
+    color: white;
+}
+.header-down{
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--first);
+    border-top: 1px solid var(--first);
+}
+.header-down ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.header-down ul li a{
+    color: var(--first);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.header-down .contact{
+    background: var(--second);
+    padding: 1rem;
+    color: white;
+    border-radius: 20px;
+    transition: .5s;
+}
+.header-down ul li a:hover{
+    border-bottom: 2px solid var(--third);
+}
+.header-down .contact:hover{
+    background: var(--third);
+
+}
+.home{
+    background: linear-gradient(to right ,rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(../images/laptop-and-shopping-bags-online-shopping-concept.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    gap: 3rem;
+    margin-top: 8rem;
+}
+.home h1{
+    color: white;
+    font-size: 3rem;
+}
+.home h3{
+    font-size: 2.5rem;
+    color: var(--third);
+}
+.home a{
+    background: var(--third);
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 7rem;
+    transition: .5s;
+}
+.home a:hover{
+    background: linear-gradient(to right,#16C79A,#19456B);
+    padding-right: 4rem;
+}
+.section-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--first);
+    font-size: 1rem;
+    font-weight: 100;
+    
+    margin-bottom: 2rem;
+}
+.section-title h1{
+    border-bottom: 1px solid var(--second);
+    padding-bottom: .5rem;
+}
+.trends-cats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.cat-img{
+    background: var(--second);
+    border-radius: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cat img{
+    width: 80px;
+}
+.cat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.cat h2{
+    font-weight: 100;
+    color: var(--first);
+    font-size: 1rem;
+}
+.menu{
+    display: none;
+}
+.section-products{
+    display: grid;
+    grid-template-columns: repeat(4,.5fr);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.product{
+    width: 20rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 5px 10px 1px var(--second);
+    
+    
+}
+.product img{
+   width: 100%;
+   height: 70%;
+}
+.product-cat{
+    color: var(--second);
+    font-weight: 100;
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+.product-title{
+    font-weight: bold;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+    
+}
+.like-add{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    padding: 0 1rem;
+}
+.like-add i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.price{
+    margin-left: 1.2rem;
+    margin-bottom: .5rem;
+    color: var(--third);
+}
+.stars i{
+    color: yellow;
+}
+.stars{
+    margin-left: 1rem;
+    margin-bottom: .3rem;
+}
+.electronic-home{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/electronic\ background.jfif);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.electronic-home h1,.phones-home h1{
+    color: white;
+    font-size: 4rem;
+}
+.electronic-home h2,.phones-home h2{
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    
+}
+.electronic-home a{
+    background: var(--third);
+    padding: 1rem 5rem;
+    color: white;
+    border-radius: 20px;
+}
+.electronic-home a:hover{
+    background: var(--first);
+}
+.phones-home{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/loei-thailand-may-10-2017-hand-holding-samsung-s8-with-mobile-application-for-facebook-on-the-screen.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+footer{
+    box-shadow: 1px 1px 10px 1px var(--first);
+    padding-top: 1rem;
+}
+.footer-container{
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    row-gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.footer-logo{
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-semi-bold);
+}
+.footer-description{
+    display: block;
+    font-size: var(--small-font-size);
+    margin: .25rem 0 var(--mb-3);
+}
+.footer-social{
+    font-size: 1.5rem;
+    color: var(--title-color);
+    margin-right: var(--mb-2);
+}
+.footer-title{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-2);
+}
+.footer-link{
+    display: inline-block;
+    color: var(--text-color);
+    margin-bottom: var(--mb-1);
+}
+.footer-link:hover{
+    color: var(--first-color);
+}
+.footer-copy{
+    text-align: center;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-top: 3.5rem;
+}
+@media screen and (min-width:576px){
+    .home-container,.about-container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    .about-data,.about-initial{
+        text-align: initial;
+    }
+    .contact-container{
+        grid-template-columns: 1.75fr 1fr;
+        align-items: center;
+    }
+    .contact-button{
+        justify-self: center;
+    }
+}
+@media only  screen and (max-width:800px){
+    
+    .logo a{
+        font-size: 1rem;
+    }
+    
+    .menu{
+        display: block;
+    }
+    .menu i{
+        font-size: 2rem;
+    }
+    .header-down{
+        border: none;
+    }
+    .header{
+        height: 1rem;
+    }
+    .header-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .header-down ul{
+        flex-direction: column;
+        position: absolute;
+        background: white;
+        top: 5%;
+        right: -100%;
+        width: 15rem;
+        height: 100vh;
+        transition: 1s ease-in-out;
+    }
+    .header-down .show{
+        right: 0;
+    }
+    
+   .trends-cats{
+       gap: 2rem;
+   }
+    .cat-img img{
+        width: 20px;
+    }  
+    .phone{
+        display: none;
+    }
+    .shopping i{
+        font-size: 1.5rem;
+    }
+    .shopping .bag::after{
+        left: 0rem;
+        top: -1rem;
+    }
+    .shopping .likes::after{
+        left: 0rem;
+        top: -1rem;
+    }
+    .search-bar{
+        display: none;
+    }
+    .home{
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+    .home h1{
+        font-size: 1.5rem;
+    }
+    .home h3{
+        font-size: 1.5rem;
+    }
+    .section-title h1{
+        font-size: 1rem;
+    }
+    .cat h2{
+        font-size: .5rem;
+    }
+    .section-products{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .electronic-home h1, .phones-home h1{
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .electronic-home h2{
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-bottom: 15rem;
+    }
+    .phones-home h2{
+        font-size: 2rem;
+    }
+    
+}
